@@ -35,11 +35,27 @@ class jsonrpc_frameworkTests: XCTestCase {
         }
     }
     
-    func test_1() throws {
+    func test_version() throws {
         let tmp = RPCRequest()
         NSLog("JSON-RPC Version: \(String(describing: tmp.version))")
         
         XCTAssert(tmp.version == "2.0")
+    }
+    
+    func test_rpc() throws {
+        
+        let rpc = JSONRPCClient(serviceEndpoint: "https://api.example.com")
+        
+        rpc?.invoke("getAppleProductIdentifiers", params: [], onCompleted: onResponse)
+    }
+    
+    private func onResponse(response: Optional<RPCResponse>)->Void {
+        NSLog("getAppleProductIdentifiers");
+        NSLog("Respone: \(String(describing: response))");
+        NSLog("Error: \(String(describing: response?.error))");
+        NSLog("Result: \(String(describing: response?.result))");
+        
+        fflush(stdout)
     }
 
 }
