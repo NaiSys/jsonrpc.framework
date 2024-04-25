@@ -22,15 +22,15 @@
 /**
  * Sends a notification to json rpc server.
  *
- * @param NSString method Method to call
+ * @param method NSString Method to call
  */
 - (void) notify:(NSString *)method;
 
 /**
  * Sends a notification to json rpc server.
  *
- * @param NSString method Method to call
- * @param id Either named or un-named parameter list (or nil)
+ * @param method NSString Method to call
+ * @param params id Either named or un-named parameter list (or nil)
  */
 - (void) notify:(NSString *)method params:(id)params;
 

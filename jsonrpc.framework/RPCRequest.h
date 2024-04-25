@@ -23,38 +23,33 @@ typedef void (^RPCRequestCallback)(RPCResponse *response);
 #pragma mark - Properties -
 
 /**
- * The used RPC Version. 
+ * @brief The used RPC Version.
  * This client only supports version 2.0 at the moment.
  *
- * @param NSString
  */
 @property (nonatomic, retain) NSString *version;
 
 /**
  * The id that was used in the request. If id is nil the request is treated like an  notification.
  *
- * @param NSString
  */
 @property (nonatomic, retain) NSString *id;
 
 /**
  * Method to call at the RPC Server.
  *
- * @param NSString 
  */
 @property (nonatomic, retain) NSString *method;
 
 /**
  * Request params. Either named, un-named or nil
  *
- * @param id
  */
 @property (nonatomic, retain) id params;
 
 /**
  * Callback to call whenever request is fininshed
  *
- * @param RPCRequestCallback
  */
 @property (nonatomic, copy) RPCRequestCallback callback;
 
@@ -69,7 +64,7 @@ typedef void (^RPCRequestCallback)(RPCResponse *response);
 /**
  * Helper method to get an autoreleased request object
  *
- * @param NSString method The method that this request if for
+ * @param method NSString The method that this request if for
  * @return RPCRequest (autoreleased)
  */
 + (id) requestWithMethod:(NSString*) method;
@@ -77,8 +72,8 @@ typedef void (^RPCRequestCallback)(RPCResponse *response);
 /**
  * Helper method to get an autoreleased request object 
  *
- * @param NSString method The method that this request if for
- * @param id params Some parameters to send along with the request, either named, un-named or nil
+ * @param method NSString The method that this request if for
+ * @param params id Some parameters to send along with the request, either named, un-named or nil
  * @return RPCRequest (autoreleased)
  */
 + (id) requestWithMethod:(NSString*) method params:(id) params;
@@ -86,9 +81,9 @@ typedef void (^RPCRequestCallback)(RPCResponse *response);
 /**
  * Helper method to get an autoreleased request object
  *
- * @param NSString method The method that this request if for
- * @param id params Some parameters to send along with the request, either named, un-named or nil
- * @param RPCRequestCallback the callback to call once the request is finished
+ * @param method NSString The method that this request if for
+ * @param params id Some parameters to send along with the request, either named, un-named or nil
+ * @param callback RPCRequestCallback the callback to call once the request is finished
  * @return RPCRequest (autoreleased)
  */
 + (id) requestWithMethod:(NSString*) method params:(id) params callback:(RPCRequestCallback)callback;

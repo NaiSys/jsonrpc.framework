@@ -50,7 +50,7 @@
 /**
  * Inits RPC Client with a specific end point.
  *
- * @param NSString* endpoint Should be some kind of standard URL
+ * @param endpoint NSString  Should be some kind of standard URL
  * @return RPCClient
  */
 - (id) initWithServiceEndpoint:(NSString*) endpoint;

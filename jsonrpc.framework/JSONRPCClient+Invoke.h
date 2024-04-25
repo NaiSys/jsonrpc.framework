@@ -22,7 +22,7 @@ typedef void (^RPCFailedCallback)(RPCError *error);
 /**
  * Invokes a RPCRequest against the end point.
  *
- * @param RPCRequest reqeust The request to invoke
+ * @param  request RPCRequest The request to invoke
  * @return NSString The used request id. Can be used to match callback's if neccesary
  */
 - (NSString *) invoke:(RPCRequest*) request;
@@ -30,9 +30,9 @@ typedef void (^RPCFailedCallback)(RPCError *error);
 /**
  * Invokes a method against the end point. This method actually generates an RPCRequest object and calls invoke:request
  *
- * @param NSString method The method to invoke
- * @param id Either named or un-named parameter list (or nil)
- * @param RPCCompletedCallback A callback method to invoke when request is done (or any error accours)
+ * @param method NSString The method to invoke
+ * @param params id Either named or un-named parameter list (or nil)
+ * @param callback RPCCompletedCallback A callback method to invoke when request is done (or any error accours)
  * @return NSString The used request id. Can be used to match callback's if neccesary
  */
 - (NSString *) invoke:(NSString*) method params:(id) params  onCompleted:(RPCRequestCallback)callback;
@@ -42,10 +42,10 @@ typedef void (^RPCFailedCallback)(RPCError *error);
  *
  * This method simply wraps invoke:method:params:onCompleted
  * 
- * @param NSString method The method to invoke
- * @param id Either named or un-named parameter list (or nil)
- * @param RPCSuccessCallback A callback method to invoke when request finishes successfull
- * @param RPCFailedCallback A callback method to invoke when request finishes with an error
+ * @param method NSString The method to invoke
+ * @param params id Either named or un-named parameter list (or nil)
+ * @param successCallback RPCSuccessCallback A callback method to invoke when request finishes successfull
+ * @param failedCallback RPCFailedCallback A callback method to invoke when request finishes with an error
  * @return NSString The used request id. Can be used to match callback's if neccesary
  */
 - (NSString *) invoke:(NSString*) method params:(id) params onSuccess:(RPCSuccessCallback)successCallback onFailure:(RPCFailedCallback)failedCallback;

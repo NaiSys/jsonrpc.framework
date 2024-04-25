@@ -17,30 +17,26 @@
 @interface RPCResponse : NSObject
 
 /**
- * The used RPC Version. 
+ * @brief The used RPC Version.
  *
- * @param NSString
  */
 @property (nonatomic, retain) NSString *version;
 
 /**
- * The id that was used in the request.
+ * @brief The id that was used in the request.
  *
- * @param NSString
  */
 @property (nonatomic, retain) NSString *id;
 
 /**
- * RPC Error. If != nil it means there was an error
+ * @brief RPC Error. If != nil it means there was an error
  *
- * @return RPCError
  */
 @property (nonatomic, retain) RPCError *error;
 
 /**
- * An object represneting the result from the method on the server
- * 
- * @param id
+ * @brief An object represneting the result from the method on the server
+ *
  */
 @property (nonatomic, retain) id result;
 
@@ -50,7 +46,7 @@
 /**
  * Helper method to get an autoreleased RPCResponse object with an error set
  *
- * @param RPCError error The error for the response
+ * @param error RPCError The error for the response
  * @return RPCRequest
  */
 + (id) responseWithError:(RPCError*)error;
