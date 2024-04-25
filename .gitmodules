@@ -1,0 +1,3 @@
+[submodule "jsonrpc.framework/thirdparty/JSONKit"]
+	path = jsonrpc.framework/thirdparty/JSONKit
+	url = https://github.com/johnezang/JSONKit.git
