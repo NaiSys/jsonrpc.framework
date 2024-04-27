@@ -37,23 +37,23 @@ class jsonrpc_frameworkTests: XCTestCase {
     
     func test_version() throws {
         let tmp = RPCRequest()
-        NSLog("JSON-RPC Version: \(String(describing: tmp.version))")
+        print("JSON-RPC Version: \(String(describing: tmp.version))")
         
         XCTAssert(tmp.version == "2.0")
     }
     
     func test_rpc() throws {
-        
+        print("Testing RPC request")
         let rpc = JSONRPCClient(serviceEndpoint: "https://api.example.com")
         
-        rpc?.invoke("getAppleProductIdentifiers", params: [], onCompleted: onResponse)
+        rpc.invoke("getAppleProductIdentifiers", params: [], onCompleted: onResponse)
     }
     
-    private func onResponse(response: Optional<RPCResponse>)->Void {
-        NSLog("getAppleProductIdentifiers");
-        NSLog("Respone: \(String(describing: response))");
-        NSLog("Error: \(String(describing: response?.error))");
-        NSLog("Result: \(String(describing: response?.result))");
+    private func onResponse(response: RPCResponse?)->Void {
+        print("getAppleProductIdentifiers");
+        print("Respone: \(String(describing: response))");
+        print("Error: \(String(describing: response?.error))");
+        print("Result: \(String(describing: response?.result))");
         
         fflush(stdout)
     }

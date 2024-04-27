@@ -7,32 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2649D66E2BDCF0C000766CA0 /* RPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D66D2BDCF0C000766CA0 /* RPCError.swift */; };
+		2649D6702BDCF18200766CA0 /* RPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D66F2BDCF18200766CA0 /* RPCResponse.swift */; };
+		2649D6722BDCF3A200766CA0 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6712BDCF3A200766CA0 /* RPCRequest.swift */; };
+		2649D6742BDCF62D00766CA0 /* JSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */; };
+		2649D6762BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */; };
+		2649D6782BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */; };
+		2649D67A2BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */; };
+		2649D67D2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D67C2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift */; };
 		26F4D5012BDA49190027136D /* jsonrpc_framework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5002BDA49190027136D /* jsonrpc_framework.docc */; };
 		26F4D5072BDA491A0027136D /* jsonrpc_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F4D4FC2BDA49190027136D /* jsonrpc_framework.framework */; };
-		26F4D50C2BDA491A0027136D /* jsonrpc_frameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D50B2BDA491A0027136D /* jsonrpc_frameworkTests.swift */; };
 		26F4D50D2BDA491A0027136D /* jsonrpc_framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D4FF2BDA49190027136D /* jsonrpc_framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D51A2BDA4C630027136D /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D5162BDA4BFC0027136D /* JSONKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5212BDA539B0027136D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5202BDA539B0027136D /* JSONKit.m */; };
-		26F4D5232BDA55F00027136D /* jsonrpc.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5222BDA55F00027136D /* jsonrpc.m */; };
-		26F4D5252BDA562A0027136D /* jsonrpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D5242BDA562A0027136D /* jsonrpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5272BDA56860027136D /* JSONRPCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D5262BDA56860027136D /* JSONRPCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D52E2BDA56AA0027136D /* JSONRPCClient+Invoke.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D5282BDA56A90027136D /* JSONRPCClient+Invoke.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D52F2BDA56AA0027136D /* RPCResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D5292BDA56A90027136D /* RPCResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5302BDA56AA0027136D /* RPCError.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D52A2BDA56A90027136D /* RPCError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5312BDA56AA0027136D /* JSONRPCClient+Multicall.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D52B2BDA56A90027136D /* JSONRPCClient+Multicall.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5322BDA56AA0027136D /* JSONRPCClient+Notification.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D52C2BDA56AA0027136D /* JSONRPCClient+Notification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D5332BDA56AA0027136D /* RPCRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D52D2BDA56AA0027136D /* RPCRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26F4D53B2BDA6CA90027136D /* RPCError.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5342BDA6CA80027136D /* RPCError.m */; };
-		26F4D53C2BDA6CA90027136D /* JSONRPCClient+Invoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5352BDA6CA80027136D /* JSONRPCClient+Invoke.m */; };
-		26F4D53D2BDA6CA90027136D /* JSONRPCClient+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5362BDA6CA80027136D /* JSONRPCClient+Notification.m */; };
-		26F4D53E2BDA6CA90027136D /* RPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5372BDA6CA80027136D /* RPCRequest.m */; };
-		26F4D53F2BDA6CA90027136D /* RPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5382BDA6CA80027136D /* RPCResponse.m */; };
-		26F4D5402BDA6CA90027136D /* JSONRPCClient+Multicall.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5392BDA6CA90027136D /* JSONRPCClient+Multicall.m */; };
-		26F4D5412BDA6CA90027136D /* JSONRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D53A2BDA6CA90027136D /* JSONRPCClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		26F4D5082BDA491A0027136D /* PBXContainerItemProxy */ = {
+		26F4D5472BDA98E10027136D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26F4D4F32BDA49190027136D /* Project object */;
 			proxyType = 1;
@@ -42,29 +31,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2649D66D2BDCF0C000766CA0 /* RPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCError.swift; sourceTree = "<group>"; };
+		2649D66F2BDCF18200766CA0 /* RPCResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCResponse.swift; sourceTree = "<group>"; };
+		2649D6712BDCF3A200766CA0 /* RPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCRequest.swift; sourceTree = "<group>"; };
+		2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCClient.swift; sourceTree = "<group>"; };
+		2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Notifications.swift"; sourceTree = "<group>"; };
+		2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Multicall.swift"; sourceTree = "<group>"; };
+		2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Invoke.swift"; sourceTree = "<group>"; };
+		2649D67C2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonrpc_frameworkTests.swift; sourceTree = "<group>"; };
 		26F4D4FC2BDA49190027136D /* jsonrpc_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jsonrpc_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F4D4FF2BDA49190027136D /* jsonrpc_framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jsonrpc_framework.h; sourceTree = "<group>"; };
 		26F4D5002BDA49190027136D /* jsonrpc_framework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = jsonrpc_framework.docc; sourceTree = "<group>"; };
 		26F4D5062BDA491A0027136D /* jsonrpc.frameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsonrpc.frameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26F4D50B2BDA491A0027136D /* jsonrpc_frameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonrpc_frameworkTests.swift; sourceTree = "<group>"; };
 		26F4D5162BDA4BFC0027136D /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = jsonrpc.framework/thirdparty/JSONKit/JSONKit.h; sourceTree = "<group>"; };
 		26F4D5202BDA539B0027136D /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = jsonrpc.framework/thirdparty/JSONKit/JSONKit.m; sourceTree = "<group>"; };
-		26F4D5222BDA55F00027136D /* jsonrpc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = jsonrpc.m; path = jsonrpc.framework/jsonrpc.m; sourceTree = "<group>"; };
-		26F4D5242BDA562A0027136D /* jsonrpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = jsonrpc.h; path = jsonrpc.framework/jsonrpc.h; sourceTree = "<group>"; };
-		26F4D5262BDA56860027136D /* JSONRPCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JSONRPCClient.h; path = jsonrpc.framework/JSONRPCClient.h; sourceTree = "<group>"; };
-		26F4D5282BDA56A90027136D /* JSONRPCClient+Invoke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSONRPCClient+Invoke.h"; path = "jsonrpc.framework/JSONRPCClient+Invoke.h"; sourceTree = "<group>"; };
-		26F4D5292BDA56A90027136D /* RPCResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RPCResponse.h; path = jsonrpc.framework/RPCResponse.h; sourceTree = "<group>"; };
-		26F4D52A2BDA56A90027136D /* RPCError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RPCError.h; path = jsonrpc.framework/RPCError.h; sourceTree = "<group>"; };
-		26F4D52B2BDA56A90027136D /* JSONRPCClient+Multicall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSONRPCClient+Multicall.h"; path = "jsonrpc.framework/JSONRPCClient+Multicall.h"; sourceTree = "<group>"; };
-		26F4D52C2BDA56AA0027136D /* JSONRPCClient+Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JSONRPCClient+Notification.h"; path = "jsonrpc.framework/JSONRPCClient+Notification.h"; sourceTree = "<group>"; };
-		26F4D52D2BDA56AA0027136D /* RPCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RPCRequest.h; path = jsonrpc.framework/RPCRequest.h; sourceTree = "<group>"; };
-		26F4D5342BDA6CA80027136D /* RPCError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RPCError.m; path = jsonrpc.framework/RPCError.m; sourceTree = "<group>"; };
-		26F4D5352BDA6CA80027136D /* JSONRPCClient+Invoke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "JSONRPCClient+Invoke.m"; path = "jsonrpc.framework/JSONRPCClient+Invoke.m"; sourceTree = "<group>"; };
-		26F4D5362BDA6CA80027136D /* JSONRPCClient+Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "JSONRPCClient+Notification.m"; path = "jsonrpc.framework/JSONRPCClient+Notification.m"; sourceTree = "<group>"; };
-		26F4D5372BDA6CA80027136D /* RPCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RPCRequest.m; path = jsonrpc.framework/RPCRequest.m; sourceTree = "<group>"; };
-		26F4D5382BDA6CA80027136D /* RPCResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RPCResponse.m; path = jsonrpc.framework/RPCResponse.m; sourceTree = "<group>"; };
-		26F4D5392BDA6CA90027136D /* JSONRPCClient+Multicall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "JSONRPCClient+Multicall.m"; path = "jsonrpc.framework/JSONRPCClient+Multicall.m"; sourceTree = "<group>"; };
-		26F4D53A2BDA6CA90027136D /* JSONRPCClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JSONRPCClient.m; path = jsonrpc.framework/JSONRPCClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,22 +69,13 @@
 		26F4D4F22BDA49190027136D = {
 			isa = PBXGroup;
 			children = (
-				26F4D53A2BDA6CA90027136D /* JSONRPCClient.m */,
-				26F4D5352BDA6CA80027136D /* JSONRPCClient+Invoke.m */,
-				26F4D5392BDA6CA90027136D /* JSONRPCClient+Multicall.m */,
-				26F4D5362BDA6CA80027136D /* JSONRPCClient+Notification.m */,
-				26F4D5342BDA6CA80027136D /* RPCError.m */,
-				26F4D5372BDA6CA80027136D /* RPCRequest.m */,
-				26F4D5382BDA6CA80027136D /* RPCResponse.m */,
-				26F4D5282BDA56A90027136D /* JSONRPCClient+Invoke.h */,
-				26F4D52B2BDA56A90027136D /* JSONRPCClient+Multicall.h */,
-				26F4D52C2BDA56AA0027136D /* JSONRPCClient+Notification.h */,
-				26F4D52A2BDA56A90027136D /* RPCError.h */,
-				26F4D52D2BDA56AA0027136D /* RPCRequest.h */,
-				26F4D5292BDA56A90027136D /* RPCResponse.h */,
-				26F4D5262BDA56860027136D /* JSONRPCClient.h */,
-				26F4D5242BDA562A0027136D /* jsonrpc.h */,
-				26F4D5222BDA55F00027136D /* jsonrpc.m */,
+				2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */,
+				2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */,
+				2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */,
+				2649D66D2BDCF0C000766CA0 /* RPCError.swift */,
+				2649D6712BDCF3A200766CA0 /* RPCRequest.swift */,
+				2649D66F2BDCF18200766CA0 /* RPCResponse.swift */,
+				2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */,
 				26F4D5202BDA539B0027136D /* JSONKit.m */,
 				26F4D5162BDA4BFC0027136D /* JSONKit.h */,
 				26F4D4FE2BDA49190027136D /* jsonrpc.framework */,
@@ -134,7 +105,7 @@
 		26F4D50A2BDA491A0027136D /* jsonrpc.frameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				26F4D50B2BDA491A0027136D /* jsonrpc_frameworkTests.swift */,
+				2649D67C2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift */,
 			);
 			path = jsonrpc.frameworkTests;
 			sourceTree = "<group>";
@@ -147,15 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F4D50D2BDA491A0027136D /* jsonrpc_framework.h in Headers */,
-				26F4D51A2BDA4C630027136D /* JSONKit.h in Headers */,
-				26F4D5252BDA562A0027136D /* jsonrpc.h in Headers */,
-				26F4D52E2BDA56AA0027136D /* JSONRPCClient+Invoke.h in Headers */,
-				26F4D52F2BDA56AA0027136D /* RPCResponse.h in Headers */,
-				26F4D5302BDA56AA0027136D /* RPCError.h in Headers */,
-				26F4D5322BDA56AA0027136D /* JSONRPCClient+Notification.h in Headers */,
-				26F4D5312BDA56AA0027136D /* JSONRPCClient+Multicall.h in Headers */,
-				26F4D5332BDA56AA0027136D /* RPCRequest.h in Headers */,
-				26F4D5272BDA56860027136D /* JSONRPCClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +153,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				26F4D5092BDA491A0027136D /* PBXTargetDependency */,
+				26F4D5482BDA98E10027136D /* PBXTargetDependency */,
 			);
 			name = jsonrpc.frameworkTests;
 			productName = jsonrpc.frameworkTests;
@@ -210,9 +172,11 @@
 				TargetAttributes = {
 					26F4D4FB2BDA49190027136D = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 					26F4D5052BDA491A0027136D = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -257,15 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26F4D53B2BDA6CA90027136D /* RPCError.m in Sources */,
-				26F4D53C2BDA6CA90027136D /* JSONRPCClient+Invoke.m in Sources */,
-				26F4D53D2BDA6CA90027136D /* JSONRPCClient+Notification.m in Sources */,
-				26F4D53E2BDA6CA90027136D /* RPCRequest.m in Sources */,
-				26F4D53F2BDA6CA90027136D /* RPCResponse.m in Sources */,
-				26F4D5402BDA6CA90027136D /* JSONRPCClient+Multicall.m in Sources */,
-				26F4D5412BDA6CA90027136D /* JSONRPCClient.m in Sources */,
-				26F4D5232BDA55F00027136D /* jsonrpc.m in Sources */,
-				26F4D5212BDA539B0027136D /* JSONKit.m in Sources */,
+				2649D67A2BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift in Sources */,
+				2649D6702BDCF18200766CA0 /* RPCResponse.swift in Sources */,
+				2649D6762BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift in Sources */,
+				2649D6722BDCF3A200766CA0 /* RPCRequest.swift in Sources */,
+				2649D6782BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift in Sources */,
+				2649D66E2BDCF0C000766CA0 /* RPCError.swift in Sources */,
+				2649D6742BDCF62D00766CA0 /* JSONRPCClient.swift in Sources */,
 				26F4D5012BDA49190027136D /* jsonrpc_framework.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,17 +236,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26F4D50C2BDA491A0027136D /* jsonrpc_frameworkTests.swift in Sources */,
+				2649D67D2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		26F4D5092BDA491A0027136D /* PBXTargetDependency */ = {
+		26F4D5482BDA98E10027136D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26F4D4FB2BDA49190027136D /* jsonrpc.framework */;
-			targetProxy = 26F4D5082BDA491A0027136D /* PBXContainerItemProxy */;
+			targetProxy = 26F4D5472BDA98E10027136D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -414,6 +376,7 @@
 		26F4D5112BDA491A0027136D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -444,6 +407,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +416,7 @@
 		26F4D5122BDA491A0027136D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -490,6 +455,8 @@
 		26F4D5142BDA491A0027136D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7J9FPCUV7X;
@@ -502,6 +469,8 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "jsonrpc.frameworkTests/jsonrpc.frameworkTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -510,6 +479,8 @@
 		26F4D5152BDA491A0027136D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7J9FPCUV7X;
@@ -522,6 +493,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "jsonrpc.frameworkTests/jsonrpc.frameworkTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

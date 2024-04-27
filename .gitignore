@@ -1,0 +1,149 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+
+# Xcode
+.DS_Store
+*/.DS_Store
+*.swp
+*~.nib
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
+
+# Build products
+build/
+DerivedData/
+
+# Dependency management
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Private user data
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# Logs and crash reports
+*.log
+*.xcactivitylog
+*.xcuserstate
+
+# Xcode thumbnails
+*.xcassets/*
+!*.xcassets/*.appiconset
+!*.xcassets/*.launchimage
+
+# Swift Package Manager
+.Package.resolved
+
+# AppCode
+.idea/
+*.iml
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Codecov
+codecov.yml
+
+[Bb]uild/*
+[Bb]uild*
+jsonrpc.framework.xcodeproj/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+
+#sql code should be placed in configurable files .in
+*.sql
+
+*~
+*.autosave
+*.a
+*.core
+*.moc
+*.o
+*.obj
+*.orig
+*.rej
+*.so
+*.so.*
+*_pch.h.cpp
+*_resource.rc
+*.qm
+.#*
+*.*#
+core
+!core/
+tags
+.DS_Store
+.directory
+*.debug
+Makefile*
+*.prl
+*.app
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+Thumbs.db
+*.res
+*.rc
+/.qmake.cache
+/.qmake.stash
+
+# Cmake files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# qtcreator generated files
+*.pro.user*
+
+# xemacs temporary files
+*.flc
+
+# Vim temporary files
+.*.swp
+
+# Visual Studio generated files
+*.ib_pdb_index
+*.idb
+*.ilk
+*.pdb
+*.sln
+*.suo
+*.vcproj
+*vcproj.*.*.user
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj
+*vcxproj.*
+
+# MinGW generated files
+*.Debug
+*.Release
+
+# Python byte code
+*.pyc
+
+# Binaries
+# --------
+*.dll
+*.exe
+

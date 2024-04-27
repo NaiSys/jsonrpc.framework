@@ -14,5 +14,3 @@ FOUNDATION_EXPORT double jsonrpc_frameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char jsonrpc_frameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <jsonrpc_framework/PublicHeader.h>
-
-#import <jsonrpc_framework/jsonrpc.h>
