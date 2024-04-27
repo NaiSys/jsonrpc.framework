@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RPCErrorCode: Int {
+public enum RPCErrorCode: Int {
     case parseError = -32700
     case invalidRequest = -32600
     case methodNotFound = -32601
@@ -17,7 +17,7 @@ enum RPCErrorCode: Int {
     case networkError = 32001
 }
 
-class RPCError: NSObject {
+public class RPCError: NSObject {
     let code: RPCErrorCode
     let message: String
     let data: Any?
@@ -60,7 +60,7 @@ class RPCError: NSObject {
         self.init(code: RPCErrorCode(rawValue: errorCode) ?? .serverError, message: errorMessage, data: errorData)
     }
     
-    override var description: String {
+    public override var description: String {
         if let data = self.data {
             return "RPCError: \(self.message) (\(self.code)): \(data)."
         } else {

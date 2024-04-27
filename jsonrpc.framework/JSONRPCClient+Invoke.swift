@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension JSONRPCClient {
+public extension JSONRPCClient {
     typealias RPCSuccessCallback = (RPCResponse) -> Void
     typealias RPCFailedCallback = (RPCError) -> Void
     

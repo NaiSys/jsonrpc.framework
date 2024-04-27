@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension JSONRPCClient {
+public extension JSONRPCClient {
     func notify(method: String, params: Any?) {
         let request = RPCRequest()
         request.method = method

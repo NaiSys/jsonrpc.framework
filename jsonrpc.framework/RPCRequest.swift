@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias RPCRequestCallback = (RPCResponse) -> Void
+public typealias RPCRequestCallback = (RPCResponse) -> Void
 
-class RPCRequest: NSObject {
+public class RPCRequest: NSObject {
     var version: String?
     var id: String?
     var method: String?

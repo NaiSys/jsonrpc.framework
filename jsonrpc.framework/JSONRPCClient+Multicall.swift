@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension JSONRPCClient {
+public extension JSONRPCClient {
     func batch(_ request: RPCRequest, _ others: RPCRequest...) {
         var tmpRequests = [RPCRequest]()
         

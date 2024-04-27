@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RPCResponse: NSObject {
+public class RPCResponse: NSObject {
     var version: String?
     var id: String?
     var error: RPCError?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDelegate {
+public class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDelegate {
     var serviceEndpoint: String?
     var requests: NSMutableDictionary?
     var requestData: NSMutableDictionary?
