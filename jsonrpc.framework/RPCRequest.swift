@@ -16,7 +16,7 @@ public class RPCRequest: NSObject {
     var params: Any?
     var callback: RPCRequestCallback?
     
-    override init() {
+    public override init() {
         super.init()
         version = "2.0"
         id = "\(arc4random())"
@@ -25,19 +25,19 @@ public class RPCRequest: NSObject {
         callback = nil
     }
     
-    class func requestWithMethod(method: String) -> RPCRequest {
+    public class func requestWithMethod(method: String) -> RPCRequest {
         let request = RPCRequest()
         request.method = method
         return request
     }
     
-    class func requestWithMethod(method: String, params: Any) -> RPCRequest {
+    public class func requestWithMethod(method: String, params: Any) -> RPCRequest {
         let request = RPCRequest.requestWithMethod(method: method)
         request.params = params
         return request
     }
     
-    class func requestWithMethod(method: String, params: Any, callback: @escaping RPCRequestCallback) -> RPCRequest {
+    public class func requestWithMethod(method: String, params: Any, callback: @escaping RPCRequestCallback) -> RPCRequest {
         let request = RPCRequest.requestWithMethod(method: method, params: params)
         request.callback = callback
         return request

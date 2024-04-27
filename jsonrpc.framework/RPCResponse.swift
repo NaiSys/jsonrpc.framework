@@ -8,10 +8,10 @@
 import Foundation
 
 public class RPCResponse: NSObject {
-    var version: String?
-    var id: String?
-    var error: RPCError?
-    var result: Any?
+    public var version: String?
+    public var id: String?
+    public var error: RPCError?
+    public var result: Any?
     
     override init() {
         super.init()
