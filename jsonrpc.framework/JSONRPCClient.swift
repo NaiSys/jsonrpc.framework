@@ -19,7 +19,7 @@ public class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnecti
         requestData = NSMutableDictionary()
     }
     
-    convenience init(serviceEndpoint: String?) {
+    public convenience init(serviceEndpoint: String?) {
         self.init()
         self.serviceEndpoint = serviceEndpoint
     }
@@ -29,95 +29,75 @@ public class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnecti
     }
     
     func postRequests(requests: [RPCRequest], async: Bool) {
-        let serializedRequests = requests.map { $0.serialize() }
+        //let serializedRequests = requests.map { $0.serialize() }
         
-        do {
-            let payload = try JSONSerialization.data(withJSONObject: serializedRequests, options: [])
+        for req in requests {
+            let serializedReq = req.serialize()
             
-            guard let serviceEndpointURL = URL(string: serviceEndpoint!) else {
-                // Handle the case where the service endpoint URL is invalid
-                return
-            }
-            
-            var serviceRequest = URLRequest(url: serviceEndpointURL)
-            serviceRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            serviceRequest.setValue("objc-JSONRpc/1.0", forHTTPHeaderField: "User-Agent")
-            serviceRequest.httpMethod = "POST"
-            serviceRequest.httpBody = payload
-            
-            if async {
-                let task = URLSession.shared.dataTask(with: serviceRequest) { [weak self] (data, response, error) in
-                    if let data = data {
+            do {
+                let payload = try JSONSerialization.data(withJSONObject: serializedReq, options: [])
+                
+                guard let serviceEndpointURL = URL(string: serviceEndpoint!) else {
+                    // Handle the case where the service endpoint URL is invalid
+                    NSLog("Warning: Invalid URL")
+                    return
+                }
+                
+                var serviceRequest = URLRequest(url: serviceEndpointURL)
+                serviceRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                serviceRequest.setValue("objc-JSONRpc/1.0", forHTTPHeaderField: "User-Agent")
+                serviceRequest.setValue("\(payload.count)", forHTTPHeaderField: "Content-Length")
+                serviceRequest.httpMethod = "POST"
+                serviceRequest.httpBody = payload
+                
+                if let payload_string = String(data: payload, encoding: .utf8) {
+                    NSLog(payload_string)
+                }
+                
+                if async {
+                    let task = URLSession.shared.dataTask(with: serviceRequest) { [weak self] (data, response, error) in
+                        NSLog("Handling async request")
+                        guard let data = data, error == nil else {
+                            NSLog("Warning: Network Error")
+                            return
+                        }
+                        
                         self?.handleData(data: data, withRequests: requests)
-                    } else {
-                        // Handle the case where there's no data or an error occurred
-                        // You can call handleFailedRequests here if needed
                     }
-                }
-                task.resume()
-            } else {
-                let semaphore = DispatchSemaphore(value: 0)
-                var responseData: Data?
-                var responseError: Error?
-                
-                let task = URLSession.shared.dataTask(with: serviceRequest) { (data, response, error) in
-                    responseData = data
-                    responseError = error
-                    semaphore.signal()
-                }
-                task.resume()
-                
-                semaphore.wait()
-                
-                if let data = responseData {
-                    handleData(data: data, withRequests: requests)
-                } else if responseError != nil {
-                    // Handle the case where an error occurred
-                    // You can call handleFailedRequests here if needed
-                }
-            }
-        } catch {
-            // Handle the case where JSON serialization fails
-            // You can call handleFailedRequests here if needed
-        }
-    }
-    
-    func sendSynchronousRequest(request: RPCRequest) -> RPCResponse {
-        let response = RPCResponse()
-        
-        do {
-            let payload = try JSONSerialization.data(withJSONObject: request.serialize(), options: [])
-            
-            let serviceRequest = NSMutableURLRequest(url: URL(string: serviceEndpoint!)!)
-            serviceRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            serviceRequest.setValue("objc-JSONRpc/1.0", forHTTPHeaderField: "User-Agent")
-            serviceRequest.setValue("\(payload.count)", forHTTPHeaderField: "Content-Length")
-            serviceRequest.httpMethod = "POST"
-            serviceRequest.httpBody = payload
-            
-            var serviceResponse: URLResponse?
-            let data = try NSURLConnection.sendSynchronousRequest(serviceRequest as URLRequest, returning: &serviceResponse)
-            
-            let jsonResult = try JSONSerialization.jsonObject(with: data, options: [])
-            if let result = jsonResult as? [String: Any] {
-                if let error = result["error"] as? [String: Any] {
-                    response.error = RPCError.error(with: error)
+                    task.resume()
                 } else {
-                    response.result = result["result"]
+                    let semaphore = DispatchSemaphore(value: 0)
+                    var responseData: Data?
+                    var responseError: Error?
+                    
+                    let task = URLSession.shared.dataTask(with: serviceRequest) { (data, response, error) in
+                        responseData = data
+                        responseError = error
+                        semaphore.signal()
+                    }
+                    task.resume()
+                    
+                    NSLog("Synchronous: Awaiting response")
+                    semaphore.wait()
+                    
+                    if let data = responseData {
+                        handleData(data: data, withRequests: requests)
+                    } else if responseError != nil {
+                        NSLog("Error occured")
+                    }
+                    //self.sendSynchronousRequest(request: serviceRequest)
                 }
-                response.id = result["id"] as? String
-                response.version = result["version"] as? String
+            } catch {
+                // Handle the case where JSON serialization fails
+                // You can call handleFailedRequests here if needed
+                NSLog("JSON serialization failed")
+                handleFailedRequests(requests: requests, withRPCError: RPCError(code: .parseError))
             }
-        } catch {
-            response.error = RPCError.error(with: .parseError)
         }
-        
-        return response
     }
-    
-    // Implement NSURLConnectionDataDelegate and NSURLConnectionDelegate methods here
     
     func handleData(data: Data, withRequests requests: [RPCRequest]) {
+        NSLog("Received response, handling data")
         do {
             let results = try JSONSerialization.jsonObject(with: data, options: [])
             
