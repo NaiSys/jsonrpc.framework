@@ -13,7 +13,7 @@ public extension JSONRPCClient {
     
     @discardableResult
     func invoke(_ request: RPCRequest) -> String {
-        postRequests(requests: [request], async: false)
+        postRequests(requests: [request], async: true)
         return request.id ?? ""
     }
     
