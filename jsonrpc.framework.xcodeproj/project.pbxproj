@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2649D66E2BDCF0C000766CA0 /* RPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D66D2BDCF0C000766CA0 /* RPCError.swift */; };
-		2649D6702BDCF18200766CA0 /* RPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D66F2BDCF18200766CA0 /* RPCResponse.swift */; };
-		2649D6722BDCF3A200766CA0 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6712BDCF3A200766CA0 /* RPCRequest.swift */; };
-		2649D6742BDCF62D00766CA0 /* JSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */; };
-		2649D6762BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */; };
-		2649D6782BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */; };
-		2649D67A2BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */; };
 		2649D67D2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D67C2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift */; };
+		2649D6852BDD10E900766CA0 /* JSONRPCClient+Invoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D67E2BDD10E800766CA0 /* JSONRPCClient+Invoke.swift */; };
+		2649D6862BDD10E900766CA0 /* JSONRPCClient+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D67F2BDD10E800766CA0 /* JSONRPCClient+Notifications.swift */; };
+		2649D6872BDD10E900766CA0 /* JSONRPCClient+Multicall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6802BDD10E900766CA0 /* JSONRPCClient+Multicall.swift */; };
+		2649D6882BDD10E900766CA0 /* RPCResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6812BDD10E900766CA0 /* RPCResponse.swift */; };
+		2649D6892BDD10E900766CA0 /* JSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6822BDD10E900766CA0 /* JSONRPCClient.swift */; };
+		2649D68A2BDD10E900766CA0 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6832BDD10E900766CA0 /* RPCRequest.swift */; };
+		2649D68B2BDD10E900766CA0 /* RPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D6842BDD10E900766CA0 /* RPCError.swift */; };
 		26F4D5012BDA49190027136D /* jsonrpc_framework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26F4D5002BDA49190027136D /* jsonrpc_framework.docc */; };
 		26F4D5072BDA491A0027136D /* jsonrpc_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F4D4FC2BDA49190027136D /* jsonrpc_framework.framework */; };
 		26F4D50D2BDA491A0027136D /* jsonrpc_framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F4D4FF2BDA49190027136D /* jsonrpc_framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,14 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2649D66D2BDCF0C000766CA0 /* RPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCError.swift; sourceTree = "<group>"; };
-		2649D66F2BDCF18200766CA0 /* RPCResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCResponse.swift; sourceTree = "<group>"; };
-		2649D6712BDCF3A200766CA0 /* RPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCRequest.swift; sourceTree = "<group>"; };
-		2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRPCClient.swift; sourceTree = "<group>"; };
-		2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Notifications.swift"; sourceTree = "<group>"; };
-		2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Multicall.swift"; sourceTree = "<group>"; };
-		2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONRPCClient+Invoke.swift"; sourceTree = "<group>"; };
 		2649D67C2BDD046F00766CA0 /* jsonrpc_frameworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonrpc_frameworkTests.swift; sourceTree = "<group>"; };
+		2649D67E2BDD10E800766CA0 /* JSONRPCClient+Invoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JSONRPCClient+Invoke.swift"; path = "jsonrpc.framework/JSONRPCClient+Invoke.swift"; sourceTree = "<group>"; };
+		2649D67F2BDD10E800766CA0 /* JSONRPCClient+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JSONRPCClient+Notifications.swift"; path = "jsonrpc.framework/JSONRPCClient+Notifications.swift"; sourceTree = "<group>"; };
+		2649D6802BDD10E900766CA0 /* JSONRPCClient+Multicall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JSONRPCClient+Multicall.swift"; path = "jsonrpc.framework/JSONRPCClient+Multicall.swift"; sourceTree = "<group>"; };
+		2649D6812BDD10E900766CA0 /* RPCResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RPCResponse.swift; path = jsonrpc.framework/RPCResponse.swift; sourceTree = "<group>"; };
+		2649D6822BDD10E900766CA0 /* JSONRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JSONRPCClient.swift; path = jsonrpc.framework/JSONRPCClient.swift; sourceTree = "<group>"; };
+		2649D6832BDD10E900766CA0 /* RPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RPCRequest.swift; path = jsonrpc.framework/RPCRequest.swift; sourceTree = "<group>"; };
+		2649D6842BDD10E900766CA0 /* RPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RPCError.swift; path = jsonrpc.framework/RPCError.swift; sourceTree = "<group>"; };
 		26F4D4FC2BDA49190027136D /* jsonrpc_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = jsonrpc_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F4D4FF2BDA49190027136D /* jsonrpc_framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jsonrpc_framework.h; sourceTree = "<group>"; };
 		26F4D5002BDA49190027136D /* jsonrpc_framework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = jsonrpc_framework.docc; sourceTree = "<group>"; };
@@ -69,13 +69,13 @@
 		26F4D4F22BDA49190027136D = {
 			isa = PBXGroup;
 			children = (
-				2649D6792BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift */,
-				2649D6772BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift */,
-				2649D6752BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift */,
-				2649D66D2BDCF0C000766CA0 /* RPCError.swift */,
-				2649D6712BDCF3A200766CA0 /* RPCRequest.swift */,
-				2649D66F2BDCF18200766CA0 /* RPCResponse.swift */,
-				2649D6732BDCF62D00766CA0 /* JSONRPCClient.swift */,
+				2649D6822BDD10E900766CA0 /* JSONRPCClient.swift */,
+				2649D6802BDD10E900766CA0 /* JSONRPCClient+Multicall.swift */,
+				2649D6842BDD10E900766CA0 /* RPCError.swift */,
+				2649D6832BDD10E900766CA0 /* RPCRequest.swift */,
+				2649D67E2BDD10E800766CA0 /* JSONRPCClient+Invoke.swift */,
+				2649D67F2BDD10E800766CA0 /* JSONRPCClient+Notifications.swift */,
+				2649D6812BDD10E900766CA0 /* RPCResponse.swift */,
 				26F4D5202BDA539B0027136D /* JSONKit.m */,
 				26F4D5162BDA4BFC0027136D /* JSONKit.h */,
 				26F4D4FE2BDA49190027136D /* jsonrpc.framework */,
@@ -221,13 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2649D67A2BDCF94E00766CA0 /* JSONRPCClient+Invoke.swift in Sources */,
-				2649D6702BDCF18200766CA0 /* RPCResponse.swift in Sources */,
-				2649D6762BDCF7E300766CA0 /* JSONRPCClient+Notifications.swift in Sources */,
-				2649D6722BDCF3A200766CA0 /* RPCRequest.swift in Sources */,
-				2649D6782BDCF8AB00766CA0 /* JSONRPCClient+Multicall.swift in Sources */,
-				2649D66E2BDCF0C000766CA0 /* RPCError.swift in Sources */,
-				2649D6742BDCF62D00766CA0 /* JSONRPCClient.swift in Sources */,
+				2649D6852BDD10E900766CA0 /* JSONRPCClient+Invoke.swift in Sources */,
+				2649D6862BDD10E900766CA0 /* JSONRPCClient+Notifications.swift in Sources */,
+				2649D6872BDD10E900766CA0 /* JSONRPCClient+Multicall.swift in Sources */,
+				2649D6882BDD10E900766CA0 /* RPCResponse.swift in Sources */,
+				2649D6892BDD10E900766CA0 /* JSONRPCClient.swift in Sources */,
+				2649D68A2BDD10E900766CA0 /* RPCRequest.swift in Sources */,
+				2649D68B2BDD10E900766CA0 /* RPCError.swift in Sources */,
 				26F4D5012BDA49190027136D /* jsonrpc_framework.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
