@@ -59,6 +59,7 @@ public class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnecti
                         NSLog("Handling async request")
                         guard let data = data, error == nil else {
                             NSLog("Warning: Network Error")
+                            self?.handleFailedRequests(requests: requests, withRPCError: RPCError(code: .networkError))
                             return
                         }
                         
@@ -83,7 +84,9 @@ public class JSONRPCClient: NSObject, NSURLConnectionDataDelegate, NSURLConnecti
                     if let data = responseData {
                         handleData(data: data, withRequests: requests)
                     } else if responseError != nil {
-                        NSLog("Error occured")
+                        NSLog("Warning: Network Error")
+                        self.handleFailedRequests(requests: requests, withRPCError: RPCError(code: .networkError))
+                        
                     }
                     //self.sendSynchronousRequest(request: serviceRequest)
                 }
